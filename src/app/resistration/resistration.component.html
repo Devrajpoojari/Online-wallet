@@ -1,0 +1,168 @@
+<!-- <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-50">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+                        class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                        alt="Sample photo">
+                    <div class="card-body p-0 p-md-4">
+                        <h3 class="mb-4 pb-2 pb-md-1 mb-md-5 px-md-2">Sign Up</h3>
+                        <form>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+
+                                    <div class="form-outline">
+                                        <input type="text" id="firstName" class="form-control form-control-lg"
+                                            placeholder="First Name" name='user.firstName'
+                                            [(ngModel)]="user.firstName" />
+                                        <label class="form-label" for="firstName">First Name</label>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-2">
+
+                                    <div class="form-outline">
+                                        <input type="text" id="lastName" class="form-control form-control-lg"
+                                            placeholder="Last Name" name='user.lastName' [(ngModel)]="user.lastName" />
+                                        <label class="form-label" for="lastName">Last Name</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                    <div class="form-outline datepicker w-100">
+                                        <input type="email" class="form-control form-control-lg" id="birthdayDate"
+                                            placeholder="Email" name='user.email' [(ngModel)]="user.email" />
+                                        <label  class="form-label">Email</label>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-2">
+
+
+                                    <div class="form-outline">
+                                        <input type="number" class="form-control form-control-lg"
+                                            placeholder="Contact Number" name='user.contactNumber'
+                                            [(ngModel)]="user.contactNumber" />
+                                        <label class="form-label">Contact Number</label>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-2 pb-2">
+
+                                    <div class="form-outline">
+                                        <input type="password" id="emailAddress" class="form-control form-control-lg"
+                                            placeholder="Password" name='user.password' [(ngModel)]="user.password" />
+                                        <label class="form-label" for="emailAddress">Password</label>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-2 pb-2">
+
+                                    <div class="form-outline">
+                                        <input type="password" id="phoneNumber" class="form-control form-control-lg"
+                                            placeholder="Confirm passwords" c />
+                                        <label class="form-label" for="phoneNumber">Confirm Password</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="mt-2 pt-2">
+                                <input class="btn btn-primary btn-lg" type="submit" value="Submit"  (click)="register()"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<body>
+    <div class="signup-form">
+        <form action="/examples/actions/confirmation.php" method="post">
+            <h2>Sign Up</h2>
+            <p>Please fill in this form to create an account!</p>
+            <hr>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <span class="fa fa-user"></span>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" name="fistname" placeholder="FirstName" required="required"
+                        name='user.firstName' [(ngModel)]="user.firstName">
+                    <input type="text" class="form-control" name="lastname" placeholder="Last Name" required="required"
+                        name='user.lastName' [(ngModel)]="user.lastName">
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-paper-plane"></i>
+                        </span>
+                    </div>
+                    <input type="email" class="form-control" name="email" placeholder="Email Address"
+                        required="required" name='user.emailId' [(ngModel)]="user.emailId">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-paper-plane"></i>
+                        </span>
+                    </div>
+                    <input type="number" class="form-control" name="user.contactNumber" placeholder="Contact Number"
+                        required="required" name='user.contactNumber' [(ngModel)]="user.contactNumber">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" name="password" placeholder="Password" required="required"
+                        name='user.password' [(ngModel)]="user.password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-lock"></i>
+                            <i class="fa fa-check"></i>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password"
+                        required="required" name='cp' [(ngModel)]="cp">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a>Terms of
+                        Use</a> &amp; <a>Privacy Policy</a></label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg" (click)="register()">Sign Up</button>
+            </div>
+        </form>
+        <div class="text-center">Already have an account? <a href="#">Login here</a></div>
+    </div>
+</body>

@@ -1,0 +1,35 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened >
+        <div> <button class="m-3 btn btn-info" mat-button color="primary" routerLink="/withdraw">Withdraw Money</button>
+        </div>
+        <div> <button class="m-3 btn btn-info" mat-button color="primary" routerLink="/deposite">Deposite Money</button>
+        </div>
+        <div> <button class="m-3 btn btn-info" mat-button color="primary" routerLink="/transfer">Transefer
+                Money</button></div>
+        <div> <button class="m-3 btn btn-info" mat-button color="primary" routerLink="/transaction">Transaction Details</button></div>
+    </mat-drawer>
+
+    <mat-drawer-content>
+
+        <table class="table con">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Transaction Amount</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date and Time</th>
+                    <th scope="col">Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of details">
+                    <th>{{t.tid}}</th>
+                    <td>{{t.amount}}</td>
+                    <td>{{t.descriptions}}</td>
+                    <td>{{t.tdateAndTime}}</td>
+                    <td>{{t.type}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-drawer-content>
+</mat-drawer-container>
